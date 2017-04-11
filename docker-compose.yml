@@ -1,0 +1,35 @@
+version: '3'
+services:
+  test:
+    build:
+      context: .
+      args:
+        APP_SOURCE: "."
+        NODE_ENV: "development"
+
+    # NOTE: use 'image' for development
+    image: test
+
+    command: npm run test:dev
+
+    # NOTE: add environment file for development
+    # env_file: ./conf/vars.env
+
+    expose:
+      - "9515"
+    ports:
+      - "9515:9515"
+
+    # NOTE: the container path must match APP_PATH above
+    # NOTE: node_modules must be added here so container uses modules from its own volume
+    volumes:
+      - .:/opt/test:rw
+      - /opt/test/node_modules
+
+    networks:
+      - test-network
+
+# networking specifics
+networks:
+  test-network:
+    driver: bridge
