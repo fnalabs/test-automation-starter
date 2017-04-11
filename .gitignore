@@ -1,7 +1,7 @@
 # Project specific
 dist
-*chromium*
-*rust_mozprofile*
+.org.chromium.*
+xvfb-run.*
 core
 
 # Logs
