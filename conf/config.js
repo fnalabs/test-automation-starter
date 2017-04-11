@@ -1,18 +1,18 @@
 exports.config = {
-    directConnect: process.env.DIRECT_CONNECT || true,
+    seleniumAddress: 'http://localhost:9515',
 
     capabilities: {
         browserName: 'chrome',
         platform: 'ANY',
-        version: ''
-        // version: '',
-        // chromeOptions: {
-        //     args: [
-        //         'no-sandbox'
-        //     ]
-        // }
+        version: '',
+        chromeOptions: {
+            args: [
+                'disable-gpu',
+                'no-sandbox'
+            ]
+        }
     },
-    // chromeDriver: '/usr/bin/chromedriver',
+    chromeDriver: '/usr/bin/chromedriver',
 
     baseUrl:
         (process.env.HTTP_PROTOCOL || 'https://') +

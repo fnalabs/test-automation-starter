@@ -51,7 +51,6 @@ function lintJS(src, cacheKey) {
  * Test method(s)
  ******************************************************************************/
 function testAll(cb) {
-    // exec('xvfb-run --server-args=\'-screen 0 1280x1024x24\' protractor ./conf/config.js', function (err, stdout, stderr) {
     exec('./node_modules/protractor/bin/protractor ./conf/config.js', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
@@ -104,7 +103,6 @@ gulp.task('default', [
     `${RUN}${SCRIPTS}`
 ], runWatch);
 gulp.task('zip', [
-    `${CLEAN}${ALL}`,
     `${LINT}${GULPFILE}`,
     `${RUN}${SCRIPTS}`
 ], runZip);

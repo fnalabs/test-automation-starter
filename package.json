@@ -5,8 +5,8 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "build": "NODE_ENV=production gulp zip",
-    "test": "webdriver-manager start & NODE_ENV=production bash ./bin/xvfb-run js-auto-test ./conf/config.js",
-    "test:dev": "NODE_ENV=development gulp"
+    "test": "NODE_ENV=production xvfb-run --server-args='-screen 0 1280x1024x24' chromedriver --port=9515 --log-path=/dev/stdout & sleep 5 && ./node_modules/protractor/bin/protractor ./conf/config.js",
+    "test:dev": "NODE_ENV=development xvfb-run --server-args='-screen 0 1280x1024x24' chromedriver --port=9515 --log-path=/dev/stdout & gulp"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "npm": ">=3"
   },
   "dependencies": {
-    "js-auto-test": "~0.0.3-beta.0",
+    "js-auto-test": "~0.0.3-beta.1",
     "mocha": "~3.2.0",
     "protractor": "~5.1.1"
   },
