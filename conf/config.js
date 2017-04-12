@@ -22,7 +22,7 @@ exports.config = {
     framework: 'mocha',
     mochaOpts: {
         reporter: 'spec',
-        timeout: 5000
+        timeout: 10000
     },
 
     specs: ['../dist/**/*spec.js']
