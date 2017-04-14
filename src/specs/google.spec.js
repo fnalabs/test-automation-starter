@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import GoogleSequence from '../sequences/GoogleSequence';
 
 browser.ignoreSynchronization = true;
