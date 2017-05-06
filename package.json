@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "babel-polyfill": "~6.23.0",
-    "js-auto-test": "~0.0.3-beta.3",
+    "js-auto-test": "~1.0.0",
     "mocha": "~3.2.0",
     "protractor": "~5.1.1"
   },
