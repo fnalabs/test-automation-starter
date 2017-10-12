@@ -1,29 +1,29 @@
 exports.config = {
-    seleniumAddress: 'http://localhost:9515',
+  seleniumAddress: 'http://localhost:9515',
 
-    capabilities: {
-        browserName: 'chrome',
-        platform: 'ANY',
-        version: '',
-        chromeOptions: {
-            args: [
-                'disable-gpu',
-                'no-sandbox'
-            ]
-        }
-    },
-    chromeDriver: '/usr/bin/chromedriver',
+  capabilities: {
+    browserName: 'chrome',
+    platform: 'ANY',
+    version: '',
+    chromeOptions: {
+      args: [
+        'disable-gpu',
+        'no-sandbox'
+      ]
+    }
+  },
+  chromeDriver: '/usr/bin/chromedriver',
 
-    baseUrl:
+  baseUrl:
         (process.env.HTTP_PROTOCOL || 'https://') +
         (process.env.HTTP_HOST || 'www.google.com') +
         (process.env.HTTP_PORT ? ':' + process.env.HTTP_PORT : ''),
 
-    framework: 'mocha',
-    mochaOpts: {
-        reporter: 'spec',
-        timeout: 10000
-    },
+  framework: 'mocha',
+  mochaOpts: {
+    reporter: 'spec',
+    timeout: 10000
+  },
 
-    specs: ['../dist/**/*spec.js']
-};
+  specs: ['../dist/**/*spec.js']
+}

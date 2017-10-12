@@ -1,14 +1,11 @@
-import { IMG_SELECTOR } from '../constants';
+import { IMG_SELECTOR } from '../constants'
 
-import { Fragment } from 'js-auto-test';
-
+import { Fragment } from 'js-auto-test'
 
 export default class GoogleFragment extends Fragment {
+  constructor (fragments) {
+    super(fragments)
 
-    constructor(fragments) {
-        super(fragments);
-
-        this.setElement(IMG_SELECTOR);
-    }
-
+    this.setElement(IMG_SELECTOR)
+  }
 }
