@@ -29,27 +29,27 @@ jobs:
           paths:
             - ~/docker-auto-test-starter/node_modules
 
-  test:
-    docker:
-      - image: circleci/node:8.6.0
-    working_directory: ~/docker-auto-test-starter
-    steps:
-      - restore_cache:
-          keys:
-            - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - dependencies-{{ .Branch }}-{{ checksum "package.json" }}
-      - run:
-          name: Run lint and unit tests
-          command: npm test
-      - run:
-          name: Run coverage report
-          command: npm run coverage
-      - store_test_results:
-          path: ~/docker-auto-test-starter/coverage.lcov
-      - store_artifacts:
-          path: ~/docker-auto-test-starter/coverage.lcov
+  # test:
+  #   docker:
+  #     - image: circleci/node:8.6.0
+  #   working_directory: ~/docker-auto-test-starter
+  #   steps:
+  #     - restore_cache:
+  #         keys:
+  #           - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+  #     - restore_cache:
+  #         keys:
+  #           - dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+  #     - run:
+  #         name: Run lint and unit tests
+  #         command: npm test
+  #     - run:
+  #         name: Run coverage report
+  #         command: npm run coverage
+  #     - store_test_results:
+  #         path: ~/docker-auto-test-starter/coverage.lcov
+  #     - store_artifacts:
+  #         path: ~/docker-auto-test-starter/coverage.lcov
 
   build:
     docker:
