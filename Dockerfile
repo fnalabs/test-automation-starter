@@ -1,7 +1,8 @@
 # start with Alpine Linux Base image
-# NOTE: change FROM statement to preferred Node.js image
-FROM node:6.10.3-alpine
-MAINTAINER Adam Eilers <adam.eilers@gmail.com>
+# NOTE: change 'ARG IMG_VER="..."' statement to preferred Node.js image
+ARG IMG_VER="8.6.0-alpine"
+FROM node:${IMG_VER}
+LABEL maintainer="Adam Eilers <adam.eilers@gmail.com>"
 
 # NOTE: if user created, change APP_PATH to user's workspace
 ARG APP_PATH="/opt/test"
@@ -26,4 +27,5 @@ RUN apk update \
 EXPOSE 9515
 
 # NOTE: calls js-auto-test with default config
-CMD ["npm", "test"]
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["npm", "start"]

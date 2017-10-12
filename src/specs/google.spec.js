@@ -1,22 +1,21 @@
-import 'babel-polyfill';
+/* eslint-env mocha */
+/* global browser */
+import GoogleSequence from '../sequences/GoogleSequence'
 
-import GoogleSequence from '../sequences/GoogleSequence';
+browser.waitForAngularEnabled(false)
 
-browser.ignoreSynchronization = true;
+describe('google homepage search test', () => {
+  let googleSequence
 
+  before(() => {
+    googleSequence = new GoogleSequence()
+  })
 
-describe('google homepage img test', () => {
-    let googleSequence;
+  it('expects search to work on the google homepage', async () => {
+    await googleSequence.runSequence()
+  })
 
-    before(() => {
-        googleSequence = new GoogleSequence();
-    });
-
-    it('expects img to exist on the google homepage', async () => {
-        await googleSequence.runSequence();
-    });
-
-    after(() => {
-        googleSequence = null;
-    });
-});
+  after(() => {
+    googleSequence = null
+  })
+})
