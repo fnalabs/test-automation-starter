@@ -80,9 +80,6 @@ workflows:
       - install_dependencies:
           requires:
             - checkout_code
-      # - test:
-      #     requires:
-      #       - install_dependencies
       - build:
           requires:
-            - test
+            - install_dependencies
