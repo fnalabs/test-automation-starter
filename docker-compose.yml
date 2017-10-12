@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   test:
     build:
@@ -10,7 +10,10 @@ services:
     # NOTE: use 'image' for development
     image: test
 
-    command: npm run test:dev
+    # NOTE: comment this line out for Windows/Mac development
+    user: "1000"
+
+    command: npm run dev
 
     # NOTE: add environment file for development
     # env_file: ./conf/vars.env
