@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCREEN_WIDTH=${SCREEN_WIDTH:-1280}
 SCREEN_HEIGHT=${SCREEN_HEIGHT:-1024}
