@@ -12,7 +12,7 @@
     "dev": "npm run auto-test:init & nodemon -e js,json -w src -w conf -x \"npm run start:dev\" & nodemon -e js -w tst -x \"npm test\"",
     "fix": "standard --fix",
     "prerelease": "del test.tar.gz",
-    "release": "NODE_ENV=production npm test && npm run build && node ./bin/compress",
+    "release": "NODE_ENV=production npm run build && node ./bin/compress",
     "start": "NODE_ENV=production bash ./bin/test",
     "start:dev": "NODE_ENV=development npm run build && npm run auto-test:run",
     "pretest": "del coverage coverage.lcov .nyc_output",
