@@ -1,6 +1,6 @@
 {
   "name": "docker-auto-test-starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Starter kit for js-auto-test implementations in Docker",
   "main": "gulpfile.babel.js",
   "scripts": {
