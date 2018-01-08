@@ -1,6 +1,6 @@
 import { IMG_SELECTOR } from '../constants'
 
-import { Fragment } from 'js-auto-test'
+import { Fragment } from 'test-automation'
 
 export default class GoogleFragment extends Fragment {
   constructor (fragments) {

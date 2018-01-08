@@ -1,6 +1,6 @@
 import { FORM_SELECTOR, INPUT_SELECTOR, LINK_SELECTOR, GOOGLE_FRAGMENT, RESULT_FRAGMENT } from '../constants'
 
-import { Sequence } from 'js-auto-test'
+import { Sequence } from 'test-automation'
 
 import GoogleFragment from '../fragments/GoogleFragment'
 import PageFragment from '../fragments/PageFragment'

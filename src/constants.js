@@ -3,8 +3,8 @@ export const IMG_SELECTOR = '#hplogo'
 export const FORM_SELECTOR = '#tsf'
 export const INPUT_SELECTOR = '#lst-ib'
 export const RESULT_SELECTOR = '#res'
-export const LINK_SELECTOR = 'a[href^="https://www.google.com/webhp"]'
-export const ABOUT_SELECTOR = 'a[href^="/intl/en/about.html"]'
+export const LINK_SELECTOR = '#logo'
+export const TERMS_SELECTOR = 'a[href^="//www.google.com/intl/en_us/policies/terms/"]'
 
 // Fragments
 export const GOOGLE_FRAGMENT = Symbol('google fragment')

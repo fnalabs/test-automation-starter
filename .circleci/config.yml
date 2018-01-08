@@ -3,19 +3,19 @@ version: 2.0
 jobs:
   checkout_code:
     docker:
-      - image: circleci/node:8.7.0
-    working_directory: ~/docker-auto-test-starter
+      - image: circleci/node:8.9.4
+    working_directory: ~/test-automation-starter
     steps:
       - checkout
       - save_cache:
           key: repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/docker-auto-test-starter
+            - ~/test-automation-starter
 
   install_dependencies:
     docker:
-      - image: circleci/node:8.7.0
-    working_directory: ~/docker-auto-test-starter
+      - image: circleci/node:8.9.4
+    working_directory: ~/test-automation-starter
     steps:
       - restore_cache:
           keys:
@@ -27,12 +27,12 @@ jobs:
       - save_cache:
           key: dependencies-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
-            - ~/docker-auto-test-starter/node_modules
+            - ~/test-automation-starter/node_modules
 
   # test:
   #   docker:
-  #     - image: circleci/node:8.7.0
-  #   working_directory: ~/docker-auto-test-starter
+  #     - image: circleci/node:8.9.4
+  #   working_directory: ~/test-automation-starter
   #   steps:
   #     - restore_cache:
   #         keys:
@@ -47,14 +47,14 @@ jobs:
   #         name: Run coverage report
   #         command: npm run coverage
   #     - store_test_results:
-  #         path: ~/docker-auto-test-starter/coverage.lcov
+  #         path: ~/test-automation-starter/coverage.lcov
   #     - store_artifacts:
-  #         path: ~/docker-auto-test-starter/coverage.lcov
+  #         path: ~/test-automation-starter/coverage.lcov
 
   build:
     docker:
-      - image: circleci/node:8.7.0
-    working_directory: ~/docker-auto-test-starter
+      - image: circleci/node:8.9.4
+    working_directory: ~/test-automation-starter
     steps:
       - restore_cache:
           keys:
@@ -68,9 +68,9 @@ jobs:
       - save_cache:
           key: assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/docker-auto-test-starter/package.tar.gz
+            - ~/test-automation-starter/package.tar.gz
       - store_artifacts:
-          path: ~/docker-auto-test-starter/package.tar.gz
+          path: ~/test-automation-starter/package.tar.gz
 
 # NOTE: add 'test' job back to the workflow below if/when writing unit tests
 workflows:

@@ -1,8 +1,7 @@
 {
-  "name": "docker-auto-test-starter",
-  "version": "2.0.1",
-  "description": "Starter kit for js-auto-test implementations in Docker",
-  "main": "gulpfile.babel.js",
+  "name": "test-automation-starter",
+  "version": "2.0.2",
+  "description": "Starter kit for test-automation implementations in Docker",
   "scripts": {
     "auto-test:init": "NODE_ENV=development xvfb-run --server-args='-screen 0 1280x1024x24' chromedriver --port=9515 --log-path=/dev/stdout",
     "auto-test:run": "protractor ./conf/config.js",
@@ -17,34 +16,34 @@
     "start:dev": "NODE_ENV=development npm run build && npm run auto-test:run",
     "pretest": "del coverage coverage.lcov .nyc_output",
     "test": "standard",
-    "posttest": "NODE_ENV=test nyc --reporter=html --reporter=text mocha tst --recursive --exit",
+    "posttest": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --recursive --exit 'tst/**/*.spec.js'",
     "version": "npm run release && git add --all",
     "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aeilers/docker-auto-test-starter.git"
+    "url": "git+https://github.com/fnalabs/test-automation-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/aeilers/docker-auto-test-starter/issues"
+    "url": "https://github.com/fnalabs/test-automation-starter/issues"
   },
-  "homepage": "https://github.com/aeilers/docker-auto-test-starter#readme",
-  "author": "Adam Eilers <adam.eilers@gmail.com>",
+  "homepage": "https://github.com/fnalabs/test-automation-starter#readme",
+  "author": "Adam Eilers",
   "license": "MIT",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
   },
   "dependencies": {
-    "js-auto-test": "~2.0.1",
-    "mocha": "~4.0.1",
-    "protractor": "~5.1.2"
+    "mocha": "~4.1.0",
+    "protractor": "~5.2.2",
+    "test-automation": "~2.0.2"
   },
   "devDependencies": {
     "archiver": "~2.1.0",
     "babel-cli": "~6.26.0",
     "babel-core": "~6.26.0",
-    "babel-eslint": "~8.0.1",
+    "babel-eslint": "~8.1.2",
     "babel-plugin-add-module-exports": "~0.2.1",
     "babel-plugin-istanbul": "~4.1.5",
     "babel-plugin-transform-class-properties": "~6.24.1",
@@ -52,13 +51,13 @@
     "babel-register": "~6.26.0",
     "chai": "~4.1.2",
     "chai-as-promised": "~7.1.1",
-    "codecov": "~2.3.1",
+    "codecov": "~3.0.0",
     "del-cli": "~1.1.0",
     "dirty-chai": "~2.0.1",
-    "nodemon": "~1.12.1",
-    "nyc": "~11.2.1",
+    "nodemon": "~1.14.8",
+    "nyc": "~11.4.1",
     "proxyquire": "~1.8.0",
-    "sinon": "~4.0.1",
+    "sinon": "~4.1.3",
     "standard": "~10.0.3"
   },
   "nyc": {
