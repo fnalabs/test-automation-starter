@@ -1,8 +1,8 @@
 # start with Alpine Linux Base image
 # NOTE: change 'ARG IMG_VER="..."' statement to preferred Node.js image
-ARG IMG_VER="8.7.0-alpine"
+ARG IMG_VER="8.9.4-alpine"
 FROM node:${IMG_VER}
-LABEL maintainer="Adam Eilers <adam.eilers@gmail.com>"
+LABEL maintainer="Adam Eilers"
 
 # NOTE: if user created, change APP_PATH to user's workspace
 ARG APP_PATH="/opt/test"
@@ -26,6 +26,6 @@ RUN apk update \
 # expose standard Node.js port of 3000
 EXPOSE 9515
 
-# NOTE: calls js-auto-test with default config
+# NOTE: calls auto-test with default config
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["npm", "start"]
