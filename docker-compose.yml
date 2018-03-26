@@ -28,6 +28,7 @@ services:
     volumes:
       - .:/opt/test:rw
       - /opt/test/node_modules
+      - ../test-automation:/opt/test/node_modules/test-automation:rw
 
     networks:
       - test-network
