@@ -12,7 +12,6 @@ export default class PageFragment extends Fragment {
   }
 
   async testElements () {
-    console.log(typeof this)
     await super.testElements()
 
     await this.testText(TERMS_SELECTOR, 'Terms')

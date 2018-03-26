@@ -8,7 +8,7 @@
 Docker starter kit for [test-automation](https://www.npmjs.com/package/test-automation) implementations.
 
 ## Purpose
-The purpose of this starter kit is to provide the base constructs to develop and build automated UI tests in a controlled environment. It provides all of the features of [starter-koa2-js](https://github.com/fnalabs/starter-koa2-js) with a few small differences. These differences are with the Docker implementation specifically:
+The purpose of this starter kit is to provide the base constructs to develop and build automated browser tests in a controlled environment. It provides all of the features of [starter-koa2-js](https://github.com/fnalabs/starter-koa2-js) with a few small differences. These differences are with the Docker implementation specifically:
 - Development
   - When a test implementation file is saved, it automatically starts the tests to run as they are defined in the [config](./conf/config.js).
 - Production
