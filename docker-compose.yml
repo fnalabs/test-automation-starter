@@ -1,4 +1,4 @@
-version: "3"
+version: "3.5"
 services:
   test:
     build:
@@ -10,16 +10,11 @@ services:
     # NOTE: use 'image' for development
     image: test
 
-    # NOTE: comment this line out for Windows/Mac development
-    user: "1000"
-
     command: npm run dev
 
     # NOTE: add environment file for development
     # env_file: ./conf/vars.env
 
-    expose:
-      - "9515"
     ports:
       - "9515:9515"
 
