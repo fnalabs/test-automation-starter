@@ -13,7 +13,7 @@ services:
     command: npm run dev
 
     # NOTE: add environment file for development
-    # env_file: ./conf/vars.env
+    # env_file: ./conf/.env
 
     ports:
       - "9515:9515"
@@ -23,7 +23,6 @@ services:
     volumes:
       - .:/opt/test:rw
       - /opt/test/node_modules
-      - ../test-automation:/opt/test/node_modules/test-automation:rw
 
     networks:
       - test-network
