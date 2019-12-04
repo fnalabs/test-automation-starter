@@ -12,7 +12,6 @@
     "coverage": "cross-env NODE_ENV=test nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "dev": "npm run auto-test:init & nodemon -e js,json -w src -w conf -x \"npm run start:dev\" & nodemon -e js -w tst -x \"npm test\"",
     "fix": "standard --fix",
-    "prerelease": "del test.tar.gz",
     "release": "npm run build",
     "start": "NODE_ENV=production bash ./bin/test",
     "start:dev": "npm run build:dev && npm run auto-test:run",
