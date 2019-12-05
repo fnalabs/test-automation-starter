@@ -1,6 +1,5 @@
 # test-automation-starter
 
-[![Build Status][circle-image]][circle-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![Dev Dependency Status][devdepstat-image]][devdepstat-url]
 [![JavaScript Style Guide][style-image]][style-url]
@@ -57,9 +56,6 @@ Currently, Google Chrome is the only supported browser. However, investigation o
 
 ## Changelog
 TODO
-
-[circle-image]: https://img.shields.io/circleci/project/github/fnalabs/test-automation-starter.svg
-[circle-url]: https://circleci.com/gh/fnalabs/test-automation-starter
 
 [depstat-image]: https://img.shields.io/david/fnalabs/test-automation-starter.svg
 [depstat-url]: https://david-dm.org/fnalabs/test-automation-starter
