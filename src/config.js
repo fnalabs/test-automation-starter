@@ -1,4 +1,4 @@
-exports.config = {
+export const config = {
   seleniumAddress: 'http://localhost:9515',
 
   capabilities: {
@@ -15,8 +15,8 @@ exports.config = {
   chromeDriver: '/usr/bin/chromedriver',
 
   baseUrl:
-        (process.env.HTTP_PROTOCOL || 'https://') +
-        (process.env.HTTP_HOST || 'www.google.com') +
+        (process.env.HTTP_PROTOCOL ?? 'https://') +
+        (process.env.HTTP_HOST ?? 'www.google.com') +
         (process.env.HTTP_PORT ? ':' + process.env.HTTP_PORT : ''),
 
   framework: 'mocha',

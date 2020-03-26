@@ -15,7 +15,7 @@ services:
     command: npm run dev
 
     # NOTE: add environment file for development
-    # env_file: ./conf/.env
+    # env_file: ./.env
 
     ports:
       - "9515:9515"

@@ -5,4 +5,4 @@ SCREEN_HEIGHT=${SCREEN_HEIGHT:-1024}
 
 # run chromedriver wrapped in virtual frame buffer then run tests
 xvfb-run --server-args="-screen 0 ${SCREEN_WIDTH}x${SCREEN_HEIGHT}x24" chromedriver --port=9515 --log-path=/dev/stdout \
-    & sleep 10 && ./node_modules/protractor/bin/protractor ./conf/config.js
+    & sleep 10 && ./node_modules/protractor/bin/protractor ./dist/config.js
