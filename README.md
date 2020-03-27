@@ -18,7 +18,7 @@ Docker starter kit for [test-automation](https://www.npmjs.com/package/test-auto
 ## Getting Started
 The purpose of this starter kit is to provide the base constructs to develop and build automated browser tests in a controlled environment. It provides all of the features of [starter-koa2-js](https://github.com/fnalabs/starter-koa2-js) with a few small differences. These differences are with the Docker implementation specifically:
 - Development
-  - When a test implementation file is saved, it automatically starts the tests to run as they are defined in the [config](./conf/config.js).
+  - When a test implementation file is saved, it automatically starts the tests to run as they are defined in the [config](./src/config.js).
 - Production
   - Production tests are run with the [test](./bin/test) script.
 
@@ -54,8 +54,7 @@ Currently, Google Chrome is the only supported browser. However, investigation o
 ## Future
 - feature requests via [issues](https://github.com/fnalabs/test-automation-starter/issues)
 
-## Changelog
-TODO
+## [Changelog](https://github.com/fnalabs/test-automation-starter/releases)
 
 [depstat-image]: https://img.shields.io/david/fnalabs/test-automation-starter.svg
 [depstat-url]: https://david-dm.org/fnalabs/test-automation-starter

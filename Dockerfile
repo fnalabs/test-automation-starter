@@ -33,7 +33,6 @@ ENV NODE_ENV="${NODE_ENV}" \
 # Project code
 COPY --from=development ${APP_PATH}/dist ${APP_PATH}/dist/
 COPY bin ${APP_PATH}/bin/
-COPY conf ${APP_PATH}/conf/
 COPY package.json package-lock.json LICENSE ${APP_PATH}/
 
 # change to workspace and run project install script
