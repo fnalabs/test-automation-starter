@@ -1,6 +1,6 @@
 {
   "name": "test-automation-starter",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "Starter kit for test-automation implementations in Docker",
   "scripts": {
     "auto-test:init": "cross-env NODE_ENV=development xvfb-run --server-args='-screen 0 1280x1024x24' chromedriver --port=9515 --log-path=/dev/stdout",
