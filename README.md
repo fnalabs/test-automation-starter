@@ -6,7 +6,6 @@
 
 Docker starter kit for [test-automation](https://www.npmjs.com/package/test-automation) implementations.
 
-#### Contents
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
@@ -16,28 +15,35 @@ Docker starter kit for [test-automation](https://www.npmjs.com/package/test-auto
 - [Changelog](#changelog)
 
 ## Getting Started
+
 The purpose of this starter kit is to provide the base constructs to develop and build automated browser tests in a controlled environment. It provides all of the features of [starter-koa2-js](https://github.com/fnalabs/starter-koa2-js) with a few small differences. These differences are with the Docker implementation specifically:
+
 - Development
   - When a test implementation file is saved, it automatically starts the tests to run as they are defined in the [config](./src/config.js).
 - Production
   - Production tests are run with the [test](./bin/test) script.
 
 ### Prerequisites
+
 To use, you'll need a few things:
+
 - **Required**
   - [Docker](https://www.docker.com/)
   - [Docker Compose](https://docs.docker.com/compose/)
 
 ### Installing
+
 To start using in your own environment, build:
+
 ```sh
-$ git clone git@github.com:fnalabs/test-automation-starter.git
-$ cd test-automation-starter
-$ docker-compose build
-$ docker-compose up
+git clone git@github.com:fnalabs/test-automation-starter.git
+cd test-automation-starter
+docker-compose build
+docker-compose up
 ```
 
 ### Environment variables
+
 Below is a table describing the possible environment variables to run the `test-automation-starter` kit. You can override these settings if/when required. This option works great if using the standard setup within a Docker container.
 
 Name           | Type    | Default           | Description
@@ -49,9 +55,11 @@ HTTP_HOST      | String  | 'www.google.com'  | HTTP host domain hame or IP of te
 HTTP_PORT      | String  |                   | optional HTTP port of test location
 
 ## Supported browser(s)
+
 Currently, Google Chrome is the only supported browser. However, investigation on running Firefox is in the works.
 
 ## Future
+
 - feature requests via [issues](https://github.com/fnalabs/test-automation-starter/issues)
 
 ## [Changelog](https://github.com/fnalabs/test-automation-starter/releases)
