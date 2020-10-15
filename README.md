@@ -6,6 +6,8 @@
 
 Docker starter kit for [test-automation](https://www.npmjs.com/package/test-automation) implementations.
 
+#### Contents
+
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
