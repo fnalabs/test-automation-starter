@@ -3,7 +3,6 @@ dist
 .org.chromium.*
 xvfb-run.*
 core
-test.tar.gz
 
 # Logs
 logs
