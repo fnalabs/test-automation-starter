@@ -1,7 +1,5 @@
 # test-automation-starter
 
-[![Dependency Status][depstat-image]][depstat-url]
-[![Dev Dependency Status][devdepstat-image]][devdepstat-url]
 [![JavaScript Style Guide][style-image]][style-url]
 
 Docker starter kit for [test-automation](https://www.npmjs.com/package/test-automation) implementations.
@@ -65,12 +63,6 @@ Currently, Google Chrome is the only supported browser. However, investigation o
 - feature requests via [issues](https://github.com/fnalabs/test-automation-starter/issues)
 
 ## [Changelog](https://github.com/fnalabs/test-automation-starter/releases)
-
-[depstat-image]: https://img.shields.io/david/fnalabs/test-automation-starter.svg
-[depstat-url]: https://david-dm.org/fnalabs/test-automation-starter
-
-[devdepstat-image]: https://img.shields.io/david/dev/fnalabs/test-automation-starter.svg
-[devdepstat-url]: https://david-dm.org/fnalabs/test-automation-starter?type=dev
 
 [style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [style-url]: https://standardjs.com
