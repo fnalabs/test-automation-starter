@@ -1,10 +1,12 @@
 // Selectors
-export const IMG_SELECTOR = '#hplogo'
-export const FORM_SELECTOR = '#tsf'
-export const INPUT_SELECTOR = 'input[name="q"]'
-export const RESULT_SELECTOR = '#res'
-export const LINK_SELECTOR = 'a[href^="https://www.google.com/webhp"]'
+export const HEADING_SELECTOR = 'h1'
+export const HEADING_TEXT = 'Example Domain'
+
+export const CONTENT_SELECTOR = 'div p:first-of-type'
+export const CONTENT_TEXT = 'This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.'
+
+export const LINK_SELECTOR = 'a[href^="https://www.iana.org/domains/example"]'
+export const LINK_TEXT = 'More information...'
 
 // Fragments
-export const GOOGLE_FRAGMENT = Symbol('google fragment')
-export const RESULT_FRAGMENT = Symbol('result fragment')
+export const EXAMPLE_FRAGMENT = Symbol('example fragment')
