@@ -16,7 +16,7 @@ export const config = {
 
   baseUrl:
         (process.env.HTTP_PROTOCOL ?? 'https://') +
-        (process.env.HTTP_HOST ?? 'www.google.com') +
+        (process.env.HTTP_HOST ?? 'example.com') +
         (process.env.HTTP_PORT ? ':' + process.env.HTTP_PORT : ''),
 
   framework: 'mocha',
